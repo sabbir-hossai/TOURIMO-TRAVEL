@@ -18,7 +18,7 @@ const Home = () => {
 
     // tourist guide
     useEffect(() => {
-        fetch('http://localhost:5000/guides')
+        fetch('https://scary-treat-11337.herokuapp.com/guides')
             .then(res => res.json())
             .then(data => setGuides(data))
     }, [])
