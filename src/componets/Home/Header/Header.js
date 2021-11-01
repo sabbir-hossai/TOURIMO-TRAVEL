@@ -23,6 +23,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/mybooking">My Booking</Nav.Link>
                             <Nav.Link as={Link} to="/managebooking">Manage Booking</Nav.Link>
+                            <Nav.Link as={Link} to="/addpackage">Add package</Nav.Link>
                         </Nav>
                         <Nav>
                             <Navbar.Brand href="#home">{users?.displayName}</Navbar.Brand>

@@ -24,30 +24,13 @@ const Booking = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/guides', data)
+        axios.post('https://scary-treat-11337.herokuapp.com/confirms', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
                     reset();
                 }
             })
-        // useEffect(() => {
-        //     fetch('http://localhost:5000/guides', {
-        //         method: 'POST',
-        //         headers: {
-        //             'content-type': 'application/json'
-        //         },
-        //         body: JSON.stringify(data)
-        //     })
-        //         .then(res => res.json())
-        //         .then(data => {
-        //             if (data.insertedId) {
-        //                 alert('Successfully added the user.')
-        //                 reset();
-        //             }
-        //         })
-        // }, [])
-
 
     };
 

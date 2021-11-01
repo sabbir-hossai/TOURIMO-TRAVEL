@@ -12,6 +12,7 @@ import Booking from './componets/booking/Booking';
 import Footer from './componets/Footer/Footer';
 import PrivateRoute from './componets/privateRoute/PrivateRoute';
 import AuthProvider from './context/AuthProvider';
+import AddPackage from './componets/addPackage/AddPackage';
 
 
 function App() {
@@ -27,12 +28,15 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/mybooking">
+            <PrivateRoute path="/mybooking">
               <MyOrder></MyOrder>
-            </Route>
-            <Route path="/managebooking">
+            </PrivateRoute>
+            <PrivateRoute path="/managebooking">
               <ManageOrder></ManageOrder>
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path="/addpackage">
+              <AddPackage></AddPackage>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
