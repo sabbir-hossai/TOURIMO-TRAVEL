@@ -1,0 +1,7 @@
+.PackageImg{
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+.PackageText{
+    text-align: justify;
+}

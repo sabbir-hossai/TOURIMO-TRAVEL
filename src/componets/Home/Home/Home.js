@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Carousel, Row } from 'react-bootstrap';
 import Guide from '../../Guide/Guide';
 import Package from '../package/Package';
-import './Home.css'
+import './Home.css';
 
 const Home = () => {
     const [tourPackages, setTourPackages] = useState();
@@ -28,7 +28,7 @@ const Home = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 height"
-                        src="https://i.ibb.co/Q8w4JDv/baner.jpg"
+                        src="https://i.ibb.co/ZW7rm6x/beach-1824855-960-720.webp"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -39,7 +39,7 @@ const Home = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 h-20px"
-                        src="https://i.ibb.co/R6PWZpp/banner1.jpg"
+                        src="https://i.ibb.co/Gt0rQPd/architecture-2149059-960-720.webp"
                         alt="Second slide"
                     />
 
@@ -51,7 +51,7 @@ const Home = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 h-20 px"
-                        src="https://i.ibb.co/LRKJR4v/banner2.jpg"
+                        src="https://i.ibb.co/hXRg1yV/oilseed-rape-2135026-960-720.webp"
                         alt="Third slide"
                     />
 
@@ -62,14 +62,17 @@ const Home = () => {
                 </Carousel.Item>
             </Carousel>
             {/* tourPackage  */}
-            <div className='container'>
-                <h2 className="text-primary mt-5 mb-5">Most Popular Packages</h2>
-                <Row xs={1} md={2} className="g-4">
-                    {
-                        tourPackages?.map(tourPackage => <Package tourPackage={tourPackage}></Package>)
-                    }
-                </Row>
+            <div className='packageBody'>
+                <div className='container'>
+                    <h2 className="text-primary mt-5 mb-5">Most Popular Packages</h2>
+                    <Row xs={1} md={3} className="g-4">
+                        {
+                            tourPackages?.map(tourPackage => <Package tourPackage={tourPackage}></Package>)
+                        }
+                    </Row>
+                </div>
             </div>
+
 
             {/* tourist guide */}
             <div className='container'>
