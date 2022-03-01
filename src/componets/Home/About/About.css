@@ -1,0 +1,31 @@
+.aboutImg  {
+width: 150px;
+height: 300px;
+border: 1px solid white;
+    border-radius: 15px;
+}
+.food{
+    width: 150px;
+    height: 250px;  
+    border: 1px solid white;
+    border-radius: 15px;
+}
+.Co-founderImg{
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 1px gray;
+}
+@media screen and (max-width:768px) {
+    .aboutImg  {
+        width: 75px;
+        height: 150px;
+        border: 1px solid white;
+            border-radius: 15px;
+        }
+        .food{
+            width: 75px;
+            height: 125px;  
+            border: 1px solid white;
+            border-radius: 15px;
+        } 
+}

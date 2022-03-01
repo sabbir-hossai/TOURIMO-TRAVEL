@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel, Row } from 'react-bootstrap';
+import About from '../About/About';
 import Guide from '../../Guide/Guide';
 import Package from '../package/Package';
 import './Home.css';
@@ -61,28 +62,40 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            {/* about start  */}
+            <About></About>
+            {/* about end  */}
             {/* tourPackage  */}
-            <div className='packageBody'>
-                <div className='container'>
-                    <h2 className="text-primary mt-5 mb-5">Most Popular <span className='text-warning '>Packages</span> </h2>
-                    <Row xs={1} md={2} className="g-4">
-                        {
-                            tourPackages?.map(tourPackage => <Package tourPackage={tourPackage}></Package>)
-                        }
-                    </Row>
+            <div className='mt-5 mb-5 pb-5'>
+                <div className='packageBody'>
+                    <div className='container'>
+                        <h2 className="text-primary mt-5 mb-5">Most Popular <span className='text-warning '>Packages</span> </h2>
+                        <Row xs={1} md={2} className="g-4">
+                            {
+                                tourPackages?.map(tourPackage => <Package tourPackage={tourPackage}></Package>)
+                            }
+                        </Row>
+                    </div>
                 </div>
             </div>
 
 
+
             {/* tourist guide */}
-            <div className='container'>
-                <h2 className="text-primary mt-5 mb-5">Most Popular <span className='text-warning '>Guides</span></h2>
-                <Row xs={1} md={2} className="g-4">
-                    {
-                        guides?.map(guide => <Guide guide={guide}></Guide>)
-                    }
-                </Row>
+            <div className='mt-5 mb-5'>
+                <div className='packageBody '>
+                    <div className='container'>
+                        <h2 className="text-primary mt-5 mb-5">Most Popular <span className='text-warning '>Guides</span></h2>
+                        <Row xs={1} md={3} className="g-4">
+                            {
+                                guides?.map(guide => <Guide guide={guide}></Guide>)
+                            }
+                        </Row>
+                    </div>
+                </div>
             </div>
+
+
             {/* Tips Before Travel */}
             <div className='container'>
                 <h2 className="text-primary mt-5 mb-5">Tips Before Travel</h2>
