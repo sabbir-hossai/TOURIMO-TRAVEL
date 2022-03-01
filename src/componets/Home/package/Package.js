@@ -8,7 +8,7 @@ const Package = (props) => {
     return (
         <div>
             <Col>
-                <div>
+                <div className='card card-shadow'>
                     <Card.Img className="PackageImg" variant="top" src={img} />
                     <Card.Body>
                         <Card.Title> {tourTitle}</Card.Title>
@@ -19,7 +19,6 @@ const Package = (props) => {
 
                     </Card.Body>
                 </div>
-
             </Col>
         </div>
     );

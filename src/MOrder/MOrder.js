@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './MyOrder.css';
 
 const MOrder = (props) => {
     const { _id, tourTitle, price, description, img } = props.orderPackage;
@@ -8,7 +9,7 @@ const MOrder = (props) => {
         <div>
             <Col>
                 <Card>
-                    <Card.Img variant="top" src={img} />
+                    <Card.Img className='PackageImg' variant="top" src={img} />
                     <Card.Body>
                         <Card.Title> {tourTitle}</Card.Title>
 
