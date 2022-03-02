@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel, Row } from 'react-bootstrap';
-import About from '../About/About';
+
 import Guide from '../../Guide/Guide';
+import About from '../About/About';
 import Package from '../package/Package';
 import './Home.css';
 
@@ -62,17 +63,21 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-            {/* about start  */}
-            <About></About>
-            {/* about end  */}
+            {/* about  */}
+            <div className='m-5'>
+                <About></About>
+            </div>
+
             {/* tourPackage  */}
             <div className='mt-5 mb-5 pb-5'>
                 <div className='packageBody'>
                     <div className='container'>
-                        <h2 className="text-primary mt-5 mb-5">Most Popular <span className='text-warning '>Packages</span> </h2>
-                        <Row xs={1} md={2} className="g-4">
+                        <h2 className="text-primary mt-5 mb-5">Discover the touch of  <span className='text-warning '>nature</span> </h2>
+                        <Row xs={1} md={3} className="g-4">
                             {
-                                tourPackages?.map(tourPackage => <Package tourPackage={tourPackage}></Package>)
+                                tourPackages?.map(tourPackage => <Package
+                                    id={tourPackage._id}
+                                    tourPackage={tourPackage}></Package>)
                             }
                         </Row>
                     </div>
@@ -97,7 +102,7 @@ const Home = () => {
 
 
             {/* Tips Before Travel */}
-            <div className='container'>
+            {/* <div className='container'>
                 <h2 className="text-primary mt-5 mb-5">Tips Before Travel</h2>
                 <h5>Security & Health</h5>
                 <p>
@@ -127,7 +132,7 @@ const Home = () => {
                 <p>
                     10. Check the country’s entrance/exit fees. Some countries require travelers to pay in order to enter or leave the country. These fees are not included in the price of your airline ticket, and can range from $25 to $200.
                 </p>
-            </div>
+            </div> */}
 
 
         </div>

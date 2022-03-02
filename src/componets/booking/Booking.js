@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import './Booking.css'
+import { Card } from 'react-bootstrap';
 
 const Booking = () => {
     const { users } = useAuth();
@@ -38,30 +39,42 @@ const Booking = () => {
     console.log(packages)
     return (
         <div className="booking-container">
-            <div>
-                <h1 className="text-primary">Tourist info</h1>
-                <h4> Name: {users.displayName}      Email: {users.email}</h4>
-            </div>
-            <div className="mt-5 mb-5">
-                <h1 className="text-primary">packages info</h1>
 
-            </div>
             <div className="container ">
-                <div className="package-container">
-                    <div>
-                        <img src={packages?.img} alt="" />
+                <div className="booking-section">
+                    <div className=' package-container card-shadow'>
+                        <h1 className="mt-3 mb-5 text-primary">packages <span className='text-warning '>info</span> </h1>
+                        <div className='packInfo container'>
+                            <div>
+                                <img src={packages?.img} alt="" />
+                            </div>
+                            <div>
+                                <div className='  '>
+                                    <Card.Body>
+                                        <Card.Title> {packages.tourTitle}</Card.Title>
+
+                                        <Card.Title>Price: {packages.price} </Card.Title>
+                                        <Card.Text className='PackageText'> {packages.description} </Card.Text>
+                                    </Card.Body>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                     <div className='add-confirm'>
                         {/* <h4>{packages.displayName}</h4>
                         <p>{packages.description}</p>
                         <p>Cost: {packages.price}/-</p> */}
-
+                        <h1>Booking now</h1>
                         <form onSubmit={handleSubmit(onSubmit)}>
+                            <input type='text'{...register("user")} value={users.displayName || ""} />
+                            <input type='text'{...register("email")} value={users.email || ""} />
                             <input type='text'{...register("name")} value={packages.tourTitle || ""} />
                             <textarea type='text'{...register("description")} defaultValue={packages.description} />
                             <input type='text' {...register("img")} value={packages.img || ""} />
                             <input type='text' {...register("package_states")} value={packages.package_states || ""} />
-                            <input type="number" {...register("price")} value={packages.price || ""} />
+                            <input type="text" {...register("price")} value={packages.price || ""} />
 
                             <input type="submit" />
                         </form>

@@ -5,8 +5,10 @@
     left: 0;
     width: 100%;
     margin-top: 35px;
-    background-color: black;
-    color: white;
+    /* background-color: rgb(253,240,233); */
+     background-color: lightgray;
+    /* color: rgb(13,110,253); */
+    color: black ;
 }
 .footer-item{
     display: grid;

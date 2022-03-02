@@ -15,7 +15,7 @@ const Package = (props) => {
 
                         <Card.Title>Price: {price} </Card.Title>
                         <Card.Text className='PackageText'> {description.slice(0, 225)} </Card.Text>
-                        <Link to={`/booking/${_id}`}><button className="btn btn-primary">Book here</button></Link>
+                        <Link to={`/booking/${_id}`}><button className="btn btn-primary bookButton">Book here</button></Link>
 
                     </Card.Body>
                 </div>

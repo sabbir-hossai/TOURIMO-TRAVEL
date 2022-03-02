@@ -24,7 +24,7 @@ const Footer = () => {
 
                 </div>
             </div>
-            <div className='bg-dark text-light'><p>Copyright © 2013 All Right Reserved, by developer Sabbir Hossain</p></div>
+            <div className='   '><p>Copyright © 2013 All Right Reserved, by developer Sabbir Hossain</p></div>
         </div>
     );
 };
