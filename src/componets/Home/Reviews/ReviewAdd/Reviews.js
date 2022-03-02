@@ -9,7 +9,7 @@ const Reviews = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('https://guarded-journey-56459.herokuapp.com/reviews', data)
+        axios.post('https://scary-treat-11337.herokuapp.com/review', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Review successfully added');
