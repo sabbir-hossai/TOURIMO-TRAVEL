@@ -13,6 +13,7 @@ import Footer from './componets/Footer/Footer';
 import PrivateRoute from './componets/privateRoute/PrivateRoute';
 import AuthProvider from './context/AuthProvider';
 import AddPackage from './componets/addPackage/AddPackage';
+import Reviews from './componets/Home/Reviews/ReviewAdd/Reviews';
 
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/addpackage">
               <AddPackage></AddPackage>
+            </PrivateRoute>
+            <PrivateRoute path="/reviews">
+              <Reviews></Reviews>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>

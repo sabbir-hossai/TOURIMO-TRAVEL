@@ -13,7 +13,7 @@ const MyOrder = () => {
 
     const handeldelete = id => {
         console.log(id)
-        const url = `http://localhost:5000/confirms/${id}`;
+        const url = `https://scary-treat-11337.herokuapp.com/confirms/${id}`;
 
         fetch(url, {
             method: 'DELETE'

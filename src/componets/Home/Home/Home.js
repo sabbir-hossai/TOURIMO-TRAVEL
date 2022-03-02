@@ -4,6 +4,7 @@ import { Carousel, Row } from 'react-bootstrap';
 import Guide from '../../Guide/Guide';
 import About from '../About/About';
 import Package from '../package/Package';
+import ReviewsShow from '../Reviews/ReviewsShow/ReviewsShow';
 import './Home.css';
 
 const Home = () => {
@@ -135,6 +136,10 @@ const Home = () => {
             </div> */}
 
 
+            {/* reviews section  */}
+            <div>
+                <ReviewsShow></ReviewsShow>
+            </div>
         </div>
     );
 };

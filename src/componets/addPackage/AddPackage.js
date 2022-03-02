@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { memo } from 'react';
 import { useForm } from 'react-hook-form';
-import './AddPackage'
+import './AddPackage.css';
 
 const AddPackage = memo(() => {
     const { register, handleSubmit, reset } = useForm();
@@ -18,12 +18,12 @@ const AddPackage = memo(() => {
     };
     return (
         <div>
-            <div className='add-confirm'>
+            <div className='add-confirm mt-5'>
                 {/* <h4>{packages.displayName}</h4>
                         <p>{packages.description}</p>
                         <p>Cost: {packages.price}/-</p> */}
 
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className='hookForm' onSubmit={handleSubmit(onSubmit)}>
                     <input type='text'{...register("name")} placeholder="Tour title" />
                     <textarea type='text'{...register("description")} placeholder="description" />
                     <input type='text' {...register("img")} placeholder="Tour title" />

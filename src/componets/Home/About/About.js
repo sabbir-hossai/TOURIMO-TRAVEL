@@ -9,7 +9,7 @@ import './About.css';
 const About = () => {
     return (
         <div>
-            <div className='container m-1'>
+            <div className='about-section'>
                 <div className="row  ">
                     <div className=" mt-5 about col-lg-5 col-md-5 col-sm-12">
                         <h1  > About Us.</h1>
