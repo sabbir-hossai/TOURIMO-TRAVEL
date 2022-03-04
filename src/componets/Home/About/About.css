@@ -1,4 +1,4 @@
-.about-section{
+  .about-section{
     width: 90%;
     margin: auto;
 }
@@ -29,7 +29,7 @@ border-radius: 15px;
     .about-section{
         width: 100% !important;
         margin: auto;
-    }
+    }   
 .aboutImg  {
     width: 75px;
     height: 100px;
@@ -42,4 +42,4 @@ border-radius: 15px;
         border: 1px solid white;
         border-radius: 15px;
     } 
-}
+}      

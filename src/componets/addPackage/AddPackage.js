@@ -7,7 +7,7 @@ const AddPackage = memo(() => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('https://scary-treat-11337.herokuapp.com/confirms', data)
+        axios.post('https://scary-treat-11337.herokuapp.com/packages', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');

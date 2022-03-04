@@ -11,7 +11,7 @@ const ReviewsShow = () => {
     }, [])
     return (
         <div className='container'>
-            <h2 className="text-primary mt-5 mb-5">Recent Reviews</h2>
+            <h2 className="text-primary mt-5 mb-5">Recent <span className='text-warning '>Reviews</span></h2>
             <Row xs={1} md={3} lg={4} className="g-4">
                 {
                     reviews.map(review => <Review

@@ -20,9 +20,10 @@ const Reviews = () => {
     return (
         <div className='add-confirm'>
             <form className="loginContainer" onSubmit={handleSubmit(onSubmit)}>
-                <input type='text'{...register("name")} defaultValue={users?.name} />
+                <input type='text'{...register("name")} defaultValue={users?.displayName} />
                 <input type='text'{...register("laptopTitle")} defaultValue={users?.email} />
                 <textarea type='text'{...register("description")} placeholder='Type your review' />
+                <textarea type='text'{...register("star")} placeholder='Type your review' />
                 <input className='btn-primary' type="submit" />
             </form>
         </div>
